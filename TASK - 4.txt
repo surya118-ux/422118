@@ -1,0 +1,26 @@
+1.Find all lines containing the word "error" in a log file (log.txt)
+student@nit-Optiplex-7070:~/422118$ grep "error" log.txt
+error: Unable to open file
+error: Network failure
+error: Disk not found
+
+2.Count the occurrences of the word "success" in a file (data.txt).
+ student@nit-Optiplex-7070:~/422118$ grep -o "success" data.txt | wc -l
+3
+
+3.Extract all lines from a file (records.txt) that start with a digit.
+student@nit-Optiplex-7070:~/422118$ grep "^[0-9]" records.txt
+1. John Doe - 23
+2. Jane Smith - 30
+3. 42 - Mystery Person
+
+4.Display all lines in file.txt that do not contain the word "failed".
+student@nit-Optiplex-7070:~/422118$ grep -v "failed" file.txt
+Task completed successfully
+File uploaded
+Process started
+
+5.Find all .txt files in the current directory that contain the word "TODO".
+student@nit-Optiplex-7070:~/422118$ grep -l "TODO" *.txt
+task_list.txt
+todo_notes.txt

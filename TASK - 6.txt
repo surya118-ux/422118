@@ -1,0 +1,31 @@
+1.creates a tar file called file.tar which is the archive of all .c files in current directory.output:-
+tar -cvf file.tar*.c
+test1.c
+test2.c
+test3.c
+test.c
+2.Extracting files from archive using option -xvf output:-
+tar -xvf file.tar
+test1.c
+test2.c
+test3.c
+test.c (Here -v is used to show the files in archive)
+3.gzip compression on tar file creates a tar file called Cfiles.tar.gz of all the .c files in the current directory. output:-
+tar -cvzf cfiles.tar.gz*.c
+test1.c
+test2.c
+test3.c
+test.c
+4.Showing the extraction of a gzip tar Cfiles.tar.gz using option -xvzf.output:-
+tar -xvzf cfiles.tar.gz
+test1.c
+test2.c
+test3.c
+test.c
+5.create *.cpio files containing specific files with the help of cpio command.output:-
+find . -iname "*.txt"|cpio -ov > archive
+./f3.txt
+./f2.txt
+./f1.txt
+./f4.txt
+1 block

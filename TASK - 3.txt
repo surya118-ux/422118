@@ -1,0 +1,78 @@
+1.
+#! /usr/bin/bash
+
+echo "enter a number:"
+read a
+
+var=$((a % 2))
+
+if [ $var -eq 0 ]
+then
+	echo "You entered an EVEN number"
+elif [ $var -eq 1 ]
+then
+	echo "You entered an ODD number"
+fi . output:-
+bash q1.sh
+enter a number:
+15
+you entered an ODD number
+2.
+#! /usr/bin/bash
+
+echo "enter a number:"
+read a
+
+var=$((a % 4))
+
+if [ $var -eq 0 ]
+then
+	echo "LEAP YEAR"
+elif [ $var -eq 1 ]
+then
+	echo "NOT leap year"
+fi. output:-
+bash q1.sh
+enter a number
+2024
+LEAP YEAR
+3.
+
+echo "Enter a number"
+read a
+
+i=$((a))
+result=1
+
+while [[ $i -ne 1 ]] ; do
+	((result=result*i))
+	((i=i-1))
+done
+
+echo "Result: $result" . OUTPUT:-
+bash q1.sh
+enter a number
+5
+result:120
+4.
+echo "Enter a:"
+read a
+echo "Enter b:"
+read b
+
+echo "you entered a $a and b $b"
+
+a=$((a+b))
+b=$((a-b))
+a=$((a-b))
+
+
+
+echo "Now a $a and b $b"
+5.
+i=1
+
+while [[ $i -le 10 ]] ; do
+	echo $i
+	((i=i+1))
+done
